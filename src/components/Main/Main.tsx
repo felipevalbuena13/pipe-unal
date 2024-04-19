@@ -2,10 +2,12 @@ import React from "react";
 
 const Main = ({
   children,
-}: Readonly<{
+  className = "",
+}: {
   children: React.ReactNode;
-}>): JSX.Element => {
-  return <main className="w-full px-24">{children}</main>;
+  className?: string;
+}): JSX.Element => {
+  return <main className={`w-full px-24 ${className}`}>{children}</main>;
 };
 
 export default Main;
